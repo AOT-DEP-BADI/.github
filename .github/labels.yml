@@ -24,11 +24,11 @@
 # ==========================================
 # PRIORITIZATION (MoSCoW)
 # ==========================================
-- name: "priority: 🚨🚨🚨 must-have "
+- name: "priority: 🚨🚨🚨 must-have"
   color: "FF9E88"
   description: "Critical item required for the upcoming stable or current release."
 
-- name: "priority: 🚨🚨 should-have "
+- name: "priority: 🚨🚨 should-have"
   color: "FFE082"
   description: "Important feature or fix that adds high value but isn't a hard blocker."
 
