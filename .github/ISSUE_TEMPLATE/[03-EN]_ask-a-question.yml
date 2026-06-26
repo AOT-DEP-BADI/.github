@@ -1,7 +1,7 @@
-name: "[EN] Ask a question"
+name: "[EN] 🙋 Ask a question"
 description: "Have a question or need help? "
-title: "Your question"
-labels: ["lang: en"]
+title: "🙋 Your question"
+labels: ["lang: en", "🙋 question"]
 body:
   - type: markdown
     attributes:

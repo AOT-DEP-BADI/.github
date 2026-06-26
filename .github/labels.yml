@@ -14,8 +14,12 @@
   description: "Code restructuring, performance tuning, or technical debt mitigation."
 
 - name: "📝 documentation"
-  color: "707ab0"
+  color: "00c0de"
   description: "Improvements, fixes, or additions to documentation or guides."
+
+- name: "🙋 question"
+  color: "d6a419"
+  description: Questions, technical support, or requests for information."
 
 # ==========================================
 # PRIORITIZATION (MoSCoW)
