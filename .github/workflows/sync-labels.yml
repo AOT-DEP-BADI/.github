@@ -20,17 +20,20 @@ jobs:
     steps:
       - name: Checkout Configuration
         uses: actions/checkout@v7
-        
+      
       - name: Sync Labels to ${{ matrix.repo }}
         run: |
-          # Fetch and delete all existing labels from the target repository
+          # 1. Fetch and delete all existing labels from the target repository
           echo "🧹 Cleaning up old labels on ${{ matrix.repo }}..."
           gh label list --repo ${{ matrix.repo }} --json name --jq '.[].name' | while read -r label_name; do
             gh label delete "$label_name" --repo ${{ matrix.repo }} --yes
           done
 
-          # Clone the single source of truth (.github) into the target repository
-          echo "🚀 Injecting single source of truth labels.yml on ${{ matrix.repo }}..."
-          gh label import --repo ${{ matrix.repo }} .github/labels.yml
+          # Parse and iterate the referentiel labels.yml to create each label
+          echo "🚀 Injecting single source of truth from labels.yml..."
+          yq e '.[] | [.name, .color, .description] | @tsv' .github/labels.yml | while IFS=$'\t' read -r name color description; do
+            echo " - 🎨 Creating label: $name"
+            gh label create "$name" --repo ${{ matrix.repo }} --color "$color" --description "$description"
+          done
         env:
           GH_TOKEN: ${{ secrets.SYNC_LABELS_TOKEN }}
