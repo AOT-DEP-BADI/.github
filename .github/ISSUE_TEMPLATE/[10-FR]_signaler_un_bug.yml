@@ -1,7 +1,7 @@
 name: "🐛 [FR] Signaler un bug"
 description: "Signaler un comportement anormal ou un dysfonctionnement."
 title: "🐛 Titre du bug"
-labels: ["lang:fr", "🐛 bug"]
+labels: ["fr", "bug"]
 type: bug
 body:
   - type: markdown
