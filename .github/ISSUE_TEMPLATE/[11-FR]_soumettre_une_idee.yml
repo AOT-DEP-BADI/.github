@@ -1,5 +1,5 @@
-name: "💡 [FR] Suggestion d'idée / de nouvelle fonctionnalité"
-description: "Envie de soumettre une nouvelle idée, amélioration ou une nouvelle fonctionnalité."
+name: "[FR] 💡 Suggestion d'idée / nouvelle fonctionnalité"
+description: "Envie de soumettre une nouvelle idée, amélioration ou fonctionnalité."
 title: "💡 Titre de mon idée"
 labels: ["fr", "💡 idea"]
 type: feature

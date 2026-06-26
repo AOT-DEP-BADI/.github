@@ -1,4 +1,4 @@
-name: "🐛 [EN] Report a bug"
+name: "[EN] 🐛 Report a bug"
 description: "Report an anomaly, glitch, or malfunction."
 title: "🐛 Title of the bug"
 labels: ["lang-en", "🐛 bug"]
