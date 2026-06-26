@@ -1,7 +1,7 @@
 name: "🐛 [EN] Report a bug"
 description: "Report an anomaly, glitch, or malfunction."
 title: "🐛 Title of the bug"
-labels: ["lang-en", "bug"]
+labels: ["lang-en", "🐛 bug"]
 type: bug
 body:
   - type: markdown
