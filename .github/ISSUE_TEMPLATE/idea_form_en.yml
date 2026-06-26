@@ -1,0 +1,53 @@
+name: "💡 [EN] Feature Request / Idea"
+description: "Submit a new idea, improvement, or feature request."
+title: "[💡 IDEA] "
+labels: ["lang:en", "💡 idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Before you begin 🔎
+        Thank you for taking the time to propose an idea! Please check the existing issues or our project roadmap first to ensure your idea is not already being reviewed or developed.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 🚀 Idea Description
+      description: "Please provide a detailed description of your idea in 2-3 sentences. Focus only on the feature and its expected behavior; do not describe the benefits just yet."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: 👥 Use Case / User Story
+      description: |
+        Explain how your idea will work from the user's perspective. How will this change bring value to the project and the community?
+        
+        **Recommended User Story structure:**
+        - **As a** [user profile]
+        - **I want to** [the feature/action]
+        - **So that** [the benefit or added value]
+      placeholder: |
+        As a...
+        I want to...
+        So that...
+    validations:
+      required: true
+
+  - type: upload
+    id: visuals
+    attributes:
+      label: 📊 Visuals (Optional)
+      description: "Drag and drop your screenshots, diagrams, or wireframes to illustrate your idea."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      description: Please make sure your proposal meets the following requirements.
+      options:
+        - label: "I have checked that this idea has not been requested before."
+          required: true
+        - label: "I confirm that this is a feature request or evolution, not a bug report."
+          required: true
