@@ -81,52 +81,52 @@
 
 # --- BRONZE LEVEL --- #
 
-- name: "🥉 Padawan-contribution 🥉"
+- name: "trophy: 🥉 Padawan"
   color: "cd7f32"
-  description: "Excellent and well-scoped first step for newcomers to contribute."
+  description: "First good contribution."
 
-- name: "🥉 Bug-hunter 🥉"
+- name: "trophy: 🥉 Mosquito-hunter"
   color: "cd7f32"
-  description: "Awarded for reporting a clearly documented and reproducible bug. Good catch!"
+  description: "Caught a tiny but annoying bug with a crystal-clear report. Good catch!"
 
-- name: "🥉 Good-idea-generator 🥉"
+- name: "trophy: 🥉 Tikawahukwa-idea-generator"
   color: "cd7f32"
-  description: "For suggesting a great, community-approved feature or improvement."
+  description: "During a coffed break, had a great idea approved by the community."
 
 # --- SILVER LEVEL --- #
 
-- name: "🥈🥈 Popcorn-provider 🥈🥈"
+- name: "trophy: 🥈 Popcorn-provider"
   color: "cbd5e1"
   description: "For bringing heavy fuel to a fascinating debate. Keep the show going!"
 
-- name: "🥈🥈 Fly-swatter 🥈🥈"
+- name: "trophy: 🥈 Fly-swatter-sniper"
   color: "cbd5e1"
-  description: "For hunting down that annoying little bug that everyone was ignoring."
+  description: "One clean smack! Obliterated a sneaky bug that was driving the community crazy."
 
-- name: "🥈🥈 Lifesaver 🥈🥈"
+- name: "trophy: 🥈 Lifesaver"
   color: "cbd5e1"
   description: "For reporting or fixing a critical, production-breaking issue."
 
-- name: "🥈🥈 Amazing-spell-checker 🥈🥈"
+- name: "trophy: 🥈 Amazing-spell-checker"
   color: "cbd5e1"
   description: "For tracking down typos, broken links, or improving documentation files."
 
-- name: "🥈🥈 Necromancer-issue 🥈🥈"
+- name: "trophy: 🥈 Necromancer-issue"
   color: "cbd5e1"
   description: "Successfully revived a dead feature or issue and made it run like new."
 
 # --- GOLD LEVEL --- #
 
-- name: "🥇🥇🥇 Einstein-analyse 🥇🥇🥇"
+- name: "trophy: 🥇 Einstein-analysis"
   color: "e3b341"
   description: "A highly detailed, deeply analyzed feature request or technical suggestion."
 
-- name: "🥇🥇🥇 Judgment-day-delayer 🥇🥇🥇"
+- name: "trophy: 🥇 Judgment-day-delayer"
   color: "e3b341"
   description: "Defused a critical, production-breaking bug right before deployment. Skynet can wait."
 
-# --- GOD LEVEL --- #
+# --- KING LEVEL --- #
 
-- name: "👑👑👑👑 Over-9000-saiyan-code-reviewer 👑👑👑👑"
+- name: "trophy: 👑 Over-9000-saiyan-code-reviewer"
   color: "24292f"
   description: "For reviewing a monstrous PR (+100k lines, 500 files) without losing your mind."
