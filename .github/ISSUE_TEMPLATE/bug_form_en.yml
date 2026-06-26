@@ -1,0 +1,65 @@
+name: "🐛 [EN] Report a bug"
+description: "Report an anomaly, glitch, or malfunction."
+title: "🐛 Title of the bug"
+labels: ["lang:en", "🐛 bug"]
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Thank you for your report!**
+        > Before getting started, please check the existing issues to make sure this bug hasn't been reported yet. If it has, feel free to add a comment or a reaction to that issue to help us prioritize it!
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        Provide a step-by-step description of how to reproduce the malfunction.
+      placeholder: |
+        1. Go to page...
+        2. Click on button...
+        3. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-observed
+    attributes:
+      label: Expected and observed behavior
+      description: |
+        What should have happened, and what actually happened instead?
+      placeholder: |
+        **Expected behavior:** 
+        
+        **Observed behavior:** 
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Environment & context (Optional)
+      description: |
+        If relevant, specify your OS, browser, software version, or any helpful background details.
+      placeholder: |
+        - OS: Windows/macOS/Linux
+        - Browser: Chrome/Firefox
+        - Version application: vX.Y.Z
+
+  - type: upload
+    id: visuals
+    attributes:
+      label: Visuals (Optional)
+      description: "Drag and drop your screenshots, log snippets, or video recordings to illustrate the issue."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Before submitting
+      description: Please make sure your report meets the following requirements.
+      options:
+        - label: "I have checked that this bug has not been reported before."
+          required: true
+        - label: "I confirm that this is a bug report (malfunction), not a feature request."
+          required: true

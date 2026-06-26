@@ -1,0 +1,65 @@
+name: "🐛 [FR] Signaler un bug"
+description: "Signaler un comportement anormal ou un dysfonctionnement."
+title: "🐛 Titre du bug"
+labels: ["lang:fr", "🐛 bug"]
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Merci pour votre signalement !**
+        > Avant de soumettre ce bug, merci de vérifier dans les tickets existants que le problème n'a pas déjà été signalé. Si c'est le cas, n'hésitez pas à ajouter un commentaire ou une réaction sur le ticket concerné pour nous aider à le prioriser !
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Étapes pour reproduire le bug
+      description: |
+        Décrivez précisément comment reproduire le dysfonctionnement, étape par étape.
+      placeholder: |
+        1. Aller sur la page...
+        2. Cliquer sur le bouton...
+        3. Constater l'erreur...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-observed
+    attributes:
+      label: Comportement attendu et observé
+      description: |
+        Qu'est-ce qui aurait dû se passer, et que s'est-il passé à la place ?
+      placeholder: |
+        **Comportement attendu :** 
+        
+        **Comportement observé :** 
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Environnement et contexte (Optionnel)
+      description: |
+        Si pertinent, précisez votre système d'exploitation, navigateur, version du logiciel, ou toute information de contexte utile.
+      placeholder: |
+        - OS: Windows/macOS/Linux
+        - Navigateur: Chrome/Firefox
+        - Version application: vX.Y.Z
+
+  - type: upload
+    id: visuals
+    attributes:
+      label: Visuels (Optionnel)
+      description: "Glissez-déposez vos captures d'écran, logs ou enregistrements vidéo pour illustrer le problème."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Avant de soumettre
+      description: Veuillez vous assurer que votre signalement respecte les points suivants.
+      options:
+        - label: "J'ai vérifié que ce bug n'a pas déjà été signalé."
+          required: true
+        - label: "Je confirme qu'il s'agit bien d'un bug (dysfonctionnement) et non d'une demande d'évolution."
+          required: true
