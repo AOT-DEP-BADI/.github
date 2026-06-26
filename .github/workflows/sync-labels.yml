@@ -1,4 +1,4 @@
-name: Sync Labels Globally
+name: Global Labels Synchronization
 
 on:
   push:
@@ -20,12 +20,9 @@ jobs:
     steps:
       - name: Checkout Configuration
         uses: actions/checkout@v4.2.2
-      
+        
       - name: Sync Labels to ${{ matrix.repo }}
-        uses: crazy-max/ghaction-github-labeler@v5.2.0
-        with:
-          repository: ${{ matrix.repo }}
-          yaml-file: .github/labels.yml
-          # Set to false to delete old labels
-          skip-delete: true
-          github-token: ${{ secrets.SYNC_LABELS_TOKEN }}
+        run: |
+          gh label clone ${{ github.repository }} --repo ${{ matrix.repo }} --force
+        env:
+          GH_TOKEN: ${{ secrets.SYNC_LABELS_TOKEN }}
