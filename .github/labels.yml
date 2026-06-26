@@ -15,7 +15,7 @@
 
 - name: "📝 documentation"
   color: "008b8d"
-  description: "Improvements, fixes, or additions to documentation, or guides."
+  description: "Improvements, fixes, or additions to documentation or guides."
 
 # ==========================================
 # PRIORITIZATION (MoSCoW)
@@ -113,7 +113,7 @@
 
 - name: "🥈 [🧟 Necromancer 🧟]"
   color: "cbd5e1"
-  description: "Successfully revived a dead feature or a completely issue and made it run like new."
+  description: "Successfully revived a dead feature or issue and made it run like new."
 
 # --- GOLD LEVEL --- #
 
@@ -123,7 +123,7 @@
 
 - name: "🥇 [🦾 Judgment-day-delayed 🦾]"
   color: "e3b341"
-  description: "Prevented global atomic annihilation by defusing a critical bug just before the judgment Day. Skynet will wait."
+  description: "Defused a critical, production-breaking bug right before deployment. Skynet can wait."
 
 # --- GOD LEVEL --- #
 
