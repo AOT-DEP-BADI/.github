@@ -23,19 +23,19 @@ jobs:
 
       - name: Sync Labels to ${{ matrix.repo }}
         run: |
-          echo "🔄 Syncing labels for ${{ matrix.repo }}..."
+          echo "🔄 Syncing labels for ${{ matrix.repo }} safely..."
           yq e '.[] | [.name, .color, .description] | @tsv' .github/labels.yml | while IFS=$'\t' read -r name color description; do
-            if gh label view "$name" --repo ${{ matrix.repo }} > /dev/null 2>&1; then
-              echo "🎨 Updating existing label: $name"
-              gh label edit "$name" --repo ${{ matrix.repo }} --color "$color" --description "$description"
-            else
-              echo "🚀 Creating new label: $name"
-              gh label create "$name" --repo ${{ matrix.repo }} --color "$color" --description "$description"
-            fi
+            echo "🎨 Syncing label (create or update): $name"
+            gh label create "$name" \
+              --repo ${{ matrix.repo }} \
+              --color "$color" \
+              --description "$description" \
+              --force
           done
           
           echo "🧹 Cleaning up obsolete labels..."
           gh label list --repo ${{ matrix.repo }} --json name --jq '.[].name' | while read -r target_label; do
+            # On vérifie si ce label du repo existe dans notre labels.yml
             MATCH=$(yq e ".[] | select(.name == \"$target_label\") | .name" .github/labels.yml)
             if [ -z "$MATCH" ]; then
               echo "🗑️ Removing obsolete label from repo: $target_label"
