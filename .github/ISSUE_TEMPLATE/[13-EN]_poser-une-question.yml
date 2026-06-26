@@ -1,0 +1,24 @@
+name: "[FR] Poser une question"
+description: "Vous avez une question ou besoin d'aide ?"
+title: "Votre question"
+labels: ["lang: fr"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Avant de demander de l'aide...**
+        > Merci de prendre un moment pour vérifier si une question similaire n'a pas déjà été traitée dans les tickets fermés ou les discussions.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Votre question et son contexte
+      description: Décrivez clairement ce que vous essayez d'accomplir ou ce que vous ne comprenez pas.
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Éléments techniques (Optionnel)
+      description: Si nécessaire, ajoutez des extraits de code, des logs ou la version que vous utilisez.

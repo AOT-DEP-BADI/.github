@@ -1,0 +1,24 @@
+name: "[EN] Ask a question"
+description: "Have a question or need help? "
+title: "Your question"
+labels: ["lang: en"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Before asking for help...**
+        > Please take a moment to check if a similar question has already been answered in closed issues or discussions.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Your question with context
+      description: Clearly describe what you are trying to achieve or what you don't understand.
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Technical details (Optional)
+      description: If relevant, add code snippets, logs, or the version you are currently using.

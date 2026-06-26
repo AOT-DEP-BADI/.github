@@ -1,7 +1,7 @@
 name: "[EN] 💡 Idea / Feature Request"
 description: "Submit a new idea, improvement, or feature request."
 title: "💡 Title of my new idea"
-labels: ["en", "💡 idea"]
+labels: ["lang: en", "💡 idea"]
 type: feature
 body:
   - type: markdown
