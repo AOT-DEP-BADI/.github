@@ -6,7 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
+
         <br/>
+        
         #### Merci pour votre proposition !
         Avant de commencer, merci de prendre le temps de partager votre idée avec nous ! Pour éviter les doublons, pensez à vérifier au préalable dans les tickets existants ou sur notre **roadmap** (si elle est disponible) que le sujet n'est pas déjà en cours d'étude. Si c'est le cas, n'hésitez pas à rejoindre la conversation directement sur le ticket concerné !
   - type: textarea
