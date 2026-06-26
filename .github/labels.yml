@@ -107,10 +107,6 @@
   color: "cbd5e1"
   description: "One clean smack! Obliterated a sneaky bug that was driving the community crazy."
 
-- name: "trophy: 🥈 Lifesaver"
-  color: "cbd5e1"
-  description: "For reporting or fixing a critical, production-breaking issue."
-
 - name: "trophy: 🥈 Amazing-spell-checker"
   color: "cbd5e1"
   description: "For tracking down typos, broken links, or improving documentation files."

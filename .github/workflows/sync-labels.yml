@@ -20,20 +20,27 @@ jobs:
     steps:
       - name: Checkout Configuration
         uses: actions/checkout@v7
-      
+
       - name: Sync Labels to ${{ matrix.repo }}
         run: |
-          # 1. Fetch and delete all existing labels from the target repository
-          echo "🧹 Cleaning up old labels on ${{ matrix.repo }}..."
-          gh label list --repo ${{ matrix.repo }} --json name --jq '.[].name' | while read -r label_name; do
-            gh label delete "$label_name" --repo ${{ matrix.repo }} --yes
-          done
-
-          # Parse and iterate the referentiel labels.yml to create each label
-          echo "🚀 Injecting single source of truth from labels.yml..."
+          echo "🔄 Syncing labels for ${{ matrix.repo }}..."
           yq e '.[] | [.name, .color, .description] | @tsv' .github/labels.yml | while IFS=$'\t' read -r name color description; do
-            echo " - 🎨 Creating label: $name"
-            gh label create "$name" --repo ${{ matrix.repo }} --color "$color" --description "$description"
+            if gh label view "$name" --repo ${{ matrix.repo }} > /dev/null 2>&1; then
+              echo "🎨 Updating existing label: $name"
+              gh label edit "$name" --repo ${{ matrix.repo }} --color "$color" --description "$description"
+            else
+              echo "🚀 Creating new label: $name"
+              gh label create "$name" --repo ${{ matrix.repo }} --color "$color" --description "$description"
+            fi
+          done
+          
+          echo "🧹 Cleaning up obsolete labels..."
+          gh label list --repo ${{ matrix.repo }} --json name --jq '.[].name' | while read -r target_label; do
+            MATCH=$(yq e ".[] | select(.name == \"$target_label\") | .name" .github/labels.yml)
+            if [ -z "$MATCH" ]; then
+              echo "🗑️ Removing obsolete label from repo: $target_label"
+              gh label delete "$target_label" --repo ${{ matrix.repo }} --yes
+            fi
           done
         env:
           GH_TOKEN: ${{ secrets.SYNC_LABELS_TOKEN }}
