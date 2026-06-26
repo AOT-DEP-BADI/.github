@@ -1,74 +1,132 @@
 # ==========================================
-# ISSUE TYPES & SCOPE
+# MAIN ISSUE TYPES
 # ==========================================
-- name: "type: bug"
+- name: "🐛 bug"
   color: "d73a4a"
   description: "Something isn't working as expected or a functional regression."
 
-- name: "type: feature"
-  color: "a2eeef"
+- name: "✨ feature"
+  color: "148944"
   description: "New feature, evolution, or functional request."
 
-- name: "type: refactor"
-  color: "a157e8"
+- name: "♻️ refactor"
+  color: "008b5f"
   description: "Code restructuring, performance tuning, or technical debt mitigation."
 
-- name: "type: documentation"
-  color: "0075ca"
-  description: "Improvements, fixes, or additions to documentation or guides."
-
-# ==========================================
-# AGILE WORKFLOW & STATUS
-# ==========================================
-- name: "status: triage"
-  color: "ededed"
-  description: "Newly submitted issue awaiting review and categorization."
-
-- name: "status: refined"
-  color: "0e8a16"
-  description: "Ready for development. Requirements and acceptance criteria are clear."
-
-- name: "status: blocked"
-  color: "b60205"
-  description: "Progress is impeded by an external dependency or technical blocker."
-
-- name: "status: help wanted"
-  color: "008672"
-  description: "Extra attention or community contribution is needed on this item."
+- name: "📝 documentation"
+  color: "008b8d"
+  description: "Improvements, fixes, or additions to documentation, or guides."
 
 # ==========================================
 # PRIORITIZATION (MoSCoW)
 # ==========================================
-- name: "priority: must-have"
-  color: "e11d21"
+- name: "priority: must-have (🚨🚨🚨)"
+  color: "FF9E88"
   description: "Critical item required for the upcoming stable or current release."
 
-- name: "priority: should-have"
-  color: "ff8c00"
+- name: "priority: should-have (🚨🚨)"
+  color: "FFE082"
   description: "Important feature or fix that adds high value but isn't a hard blocker."
 
-- name: "priority: could-have"
-  color: "fbca04"
+- name: "priority: could-have (🚨)"
+  color: "A5D6A7"
   description: "Nice-to-have improvement or minor polish if time permits."
 
-# ==========================================
-# RESOLUTION & TRIAGE CLOSURE (Clean Open-Source Standards)
-# ==========================================
-- name: "resolution: duplicate"
-  color: "cfd3d7"
-  description: "This issue or pull request already exists elsewhere."
-
-- name: "resolution: invalid"
-  color: "e4e669"
-  description: "This doesn't seem right, lacks required info, or is out of scope."
-
-- name: "resolution: wontfix"
-  color: "ffffff"
+- name: "priority: wont-have"
+  color: "E0E0E0"
   description: "This will not be worked on, either by design choice or obsolescence."
 
 # ==========================================
-# CONTENT & CONTEXT METADATA
+# AGILE WORKFLOW STATUS
 # ==========================================
-- name: "badge: good-first-issue"
-  color: "7057ff"
+- name: "status: 🎯 refined"
+  color: "cfd3d7"
+  description: "Ready for development. Requirements and acceptance criteria are clear."
+
+- name: "status: ⚙️ in progress"
+  color: "cfd3d7"
+  description: "Active development or execution is currently underway."
+
+- name: "status: 👀 in review"
+  color: "cfd3d7"
+  description: "Changes are being reviewed, or waiting for Pull Request approval."
+
+- name: "status: ✅ done"
+  color: "cfd3d7"
+  description: "Item is fully completed, tested, and deployed."
+
+- name: "status: 🛑 blocked"
+  color: "cfd3d7"
+  description: "Progress is impeded by an external dependency or technical blocker."
+
+- name: "status: 🙋 help wanted"
+  color: "cfd3d7"
+  description: "Extra attention or community contribution is needed on this item."
+
+- name: "status: 💤 stale"
+  color: "cfd3d7"
+  description: "Item is inactive, obsolete, or dropped from the current scope."
+
+- name: "status: 👯 duplicate"
+  color: "cfd3d7"
+  description: "This issue or pull request already exists elsewhere."
+
+- name: "status: 🚫 invalid"
+  color: "cfd3d7"
+  description: "This doesn't seem right, lacks required info, or is out of scope."
+
+# ==========================================
+# COMMUNITY TROPHIES & ACHIEVEMENTS
+# ==========================================
+
+# --- BRONZE LEVEL --- #
+
+- name: "🥉 [Padawan-contribution]"
+  color: "cd7f32"
   description: "Excellent and well-scoped first step for newcomers to contribute."
+
+- name: "🥉 [Bug-hunter]"
+  color: "cd7f32"
+  description: "Awarded for reporting a clearly documented and reproducible bug. Good catch!"
+
+- name: "🥉 [Idea-generator]"
+  color: "cd7f32"
+  description: "For suggesting a great, community-approved feature or improvement."
+
+# --- SILVER LEVEL --- #
+
+- name: "🥈 [🍿 Popcorn-provider 🍿]"
+  color: "cbd5e1"
+  description: "For bringing heavy fuel to a fascinating debate. Keep the show going!"
+
+- name: "🥈 [🪰 Fly-swatter 🪰]"
+  color: "cbd5e1"
+  description: "For hunting down that annoying little bug that everyone was ignoring."
+
+- name: "🥈 [Lifesaver]"
+  color: "cbd5e1"
+  description: "For reporting or fixing a critical, production-breaking issue."
+
+- name: "🥈 [✍️ Amazing-spell-checker ✍️]"
+  color: "cbd5e1"
+  description: "For tracking down typos, broken links, or improving documentation files."
+
+- name: "🥈 [🧟 Necromancer 🧟]"
+  color: "cbd5e1"
+  description: "Successfully revived a dead feature or a completely issue and made it run like new."
+
+# --- GOLD LEVEL --- #
+
+- name: "🥇 [🧠 Einstein-brain 🧠]"
+  color: "e3b341"
+  description: "A highly detailed, deeply analyzed feature request or technical suggestion."
+
+- name: "🥇 [🦾 Judgment-day-delayed 🦾]"
+  color: "e3b341"
+  description: "Prevented global atomic annihilation by defusing a critical bug just before the judgment Day. Skynet will wait."
+
+# --- GOD LEVEL --- #
+
+- name: "👑 [⚡ Over-9000-pull-requests ⚡] 👑"
+  color: "24292f"
+  description: "For reviewing a monstrous Pull Request (+1000 lines, 50 files) without losing your mind."
