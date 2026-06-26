@@ -23,6 +23,14 @@ jobs:
         
       - name: Sync Labels to ${{ matrix.repo }}
         run: |
+          # Fetch and delete all existing labels from the target repository
+          echo "🧹 Cleaning up old labels on ${{ matrix.repo }}..."
+          gh label list --repo ${{ matrix.repo }} --json name --jq '.[].name' | while read -r label_name; do
+            gh label delete "$label_name" --repo ${{ matrix.repo }} --yes
+          done
+
+          # Clone the single source of truth (.github) into the target repository
+          echo "🚀 Injecting single source of truth labels.yml on ${{ matrix.repo }}..."
           gh label clone ${{ github.repository }} --repo ${{ matrix.repo }} --force
         env:
           GH_TOKEN: ${{ secrets.SYNC_LABELS_TOKEN }}

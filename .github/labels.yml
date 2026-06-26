@@ -1,15 +1,74 @@
-- name: "🐛 bug"
+# ==========================================
+# ISSUE TYPES & SCOPE
+# ==========================================
+- name: "type: bug"
   color: "d73a4a"
-  description: "Signaler un comportement anormal ou un dysfonctionnement."
+  description: "Something isn't working as expected or a functional regression."
 
-- name: "💡 idea"
+- name: "type: feature"
   color: "a2eeef"
-  description: "Proposer une nouvelle idée ou une évolution."
+  description: "New feature, evolution, or functional request."
 
-- name: "lang:fr"
-  color: "0055a5"
-  description: "Ticket rédigé en français."
+- name: "type: refactor"
+  color: "a157e8"
+  description: "Code restructuring, performance tuning, or technical debt mitigation."
 
-- name: "lang:en"
-  color: "cc0000"
-  description: "Ticket rédigé en anglais."
+- name: "type: documentation"
+  color: "0075ca"
+  description: "Improvements, fixes, or additions to documentation or guides."
+
+# ==========================================
+# AGILE WORKFLOW & STATUS
+# ==========================================
+- name: "status: triage"
+  color: "ededed"
+  description: "Newly submitted issue awaiting review and categorization."
+
+- name: "status: refined"
+  color: "0e8a16"
+  description: "Ready for development. Requirements and acceptance criteria are clear."
+
+- name: "status: blocked"
+  color: "b60205"
+  description: "Progress is impeded by an external dependency or technical blocker."
+
+- name: "status: help wanted"
+  color: "008672"
+  description: "Extra attention or community contribution is needed on this item."
+
+# ==========================================
+# PRIORITIZATION (MoSCoW)
+# ==========================================
+- name: "priority: must-have"
+  color: "e11d21"
+  description: "Critical item required for the upcoming stable or current release."
+
+- name: "priority: should-have"
+  color: "ff8c00"
+  description: "Important feature or fix that adds high value but isn't a hard blocker."
+
+- name: "priority: could-have"
+  color: "fbca04"
+  description: "Nice-to-have improvement or minor polish if time permits."
+
+# ==========================================
+# RESOLUTION & TRIAGE CLOSURE (Clean Open-Source Standards)
+# ==========================================
+- name: "resolution: duplicate"
+  color: "cfd3d7"
+  description: "This issue or pull request already exists elsewhere."
+
+- name: "resolution: invalid"
+  color: "e4e669"
+  description: "This doesn't seem right, lacks required info, or is out of scope."
+
+- name: "resolution: wontfix"
+  color: "ffffff"
+  description: "This will not be worked on, either by design choice or obsolescence."
+
+# ==========================================
+# CONTENT & CONTEXT METADATA
+# ==========================================
+- name: "badge: good-first-issue"
+  color: "7057ff"
+  description: "Excellent and well-scoped first step for newcomers to contribute."
