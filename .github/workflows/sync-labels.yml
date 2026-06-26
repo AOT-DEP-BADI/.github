@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Checkout Configuration
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v7
         
       - name: Sync Labels to ${{ matrix.repo }}
         run: |
@@ -31,6 +31,6 @@ jobs:
 
           # Clone the single source of truth (.github) into the target repository
           echo "🚀 Injecting single source of truth labels.yml on ${{ matrix.repo }}..."
-          gh label clone ${{ github.repository }} --repo ${{ matrix.repo }} --force
+          gh label import --repo ${{ matrix.repo }} .github/labels.yml
         env:
           GH_TOKEN: ${{ secrets.SYNC_LABELS_TOKEN }}
