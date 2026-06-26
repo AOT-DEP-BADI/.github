@@ -11,7 +11,6 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     strategy:
-      # Listing of repo's organization to iterate sync
       matrix:
         repo:
           - AOT-DEP-BADI/grist-custom-widget-markdown-dsfr
@@ -20,12 +19,27 @@ jobs:
     steps:
       - name: Checkout Configuration
         uses: actions/checkout@v7
-
+      
       - name: Sync Labels to ${{ matrix.repo }}
         run: |
-          echo "🔄 Syncing labels for ${{ matrix.repo }} safely..."
-          yq e '.[] | [.name, .color, .description] | @tsv' .github/labels.yml | while IFS=$'\t' read -r name color description; do
-            echo "🎨 Syncing label (create or update): $name"
+          echo "🔄 Fetching existing labels from ${{ matrix.repo }}..."
+          # Cache all existing remote labels to avoid making repetitive API calls inside the loop
+          EXISTING_LABELS=$(gh label list --repo ${{ matrix.repo }} --json name --jq '.[].name')
+
+          # 1. Process labels defined in the local configuration file
+          yq e '.[] | [.name, .color, .description] | @tsv' .github/labels.yml | while IFS=$'\t' read -r raw_name color description; do
+            
+            # Trim leading and trailing whitespaces from the label name to prevent API 404 errors
+            name=$(echo "$raw_name" | xargs)
+            
+            # Check if the label already exists to determine the correct log status
+            if echo "$EXISTING_LABELS" | grep -Fxq "$name"; then
+              echo "🔄 [UPDATE] Global label '$name'"
+            else
+              echo "🚀 [CREATE] Global label '$name'"
+            fi
+
+            # Apply changes using an 'upsert' logic via --force (updates properties without detaching from issues)
             gh label create "$name" \
               --repo ${{ matrix.repo }} \
               --color "$color" \
@@ -33,12 +47,14 @@ jobs:
               --force
           done
           
+          # 2. Clean up obsolete labels that are no longer declared in labels.yml
           echo "🧹 Cleaning up obsolete labels..."
           gh label list --repo ${{ matrix.repo }} --json name --jq '.[].name' | while read -r target_label; do
-            # On vérifie si ce label du repo existe dans notre labels.yml
+            
+            # Check if the remote label exists in our local source of truth
             MATCH=$(yq e ".[] | select(.name == \"$target_label\") | .name" .github/labels.yml)
             if [ -z "$MATCH" ]; then
-              echo "🗑️ Removing obsolete label from repo: $target_label"
+              echo "🗑️ [DELETE] Removing obsolete label: $target_label"
               gh label delete "$target_label" --repo ${{ matrix.repo }} --yes
             fi
           done
