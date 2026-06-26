@@ -1,18 +1,22 @@
-name: "💡 [FR] Suggestion d'idée"
-description: "Envie de soumettre une idée, une amélioration ou une nouvelle fonctionnalité."
-title: "[💡 IDÉE] "
-labels: ["lang:fr", "💡 idée"]
+name: "💡 [FR] Suggestion d'idée / Nouvelle fonctionnalité"
+description: "Envie de soumettre une nouvelle idée, amélioration ou une nouvelle fonctionnalité."
+title: "💡 Titre de mon idée"
+labels: ["lang:fr", "💡 idea"]
 body:
   - type: markdown
     attributes:
       value: |
-        ### Avant de commencer
-        Merci de prendre le temps de proposer une idée ! Vérifiez d'abord dans les tickets existants ou notre roadmap si votre idée n'est pas déjà en cours d'étude.
-
+        
+        #### Merci pour votre proposition !
+        Avant de commencer, merci de prendre le temps de partager votre idée avec nous ! 
+        Pour éviter les doublons, pensez à vérifier au préalable dans les tickets existants 
+        ou sur notre **roadmap** (si elle est disponible) que le sujet n'est pas déjà en 
+        cours d'étude. Si c'est le cas, n'hésitez pas à rejoindre la conversation directement 
+        sur le ticket concerné !
   - type: textarea
     id: description
     attributes:
-      label: 🚀 Description de l'idée
+      label: Description
       description: |
         Veuillez fournir une description détaillée de votre idée en 2-3 phrases. Ne décrivez pas encore les bénéfices, concentrez-vous uniquement sur la fonctionnalité et son comportement.
     validations:
@@ -21,18 +25,18 @@ body:
   - type: textarea
     id: use-cases
     attributes:
-      label: 👥 Cas d'usage / Récit utilisateur
+      label: Cas d'usage / Récit utilisateur
       description: |
         Expliquez comment votre idée fonctionnera du point de vue de l'utilisateur. En quoi ce changement va-t-il apporter de la valeur au projet et à la communauté ?
         
         **Structure recommandée pour votre User Story:**
-        - **En tant que** [profil utilisateur]
-        - **Je souhaite** [la fonctionnalité/l'action]
-        - **Afin de** [le bénéfice ou la valeur ajoutée]
+        - **En tant que**, [profil utilisateur]
+        - **Je souhaite**, [la fonctionnalité/l'action]
+        - **Afin de**, [le bénéfice ou la valeur ajoutée]
       placeholder: |
-        En tant que...
-        Je souhaite...
-        Afin de...
+        - **En tant que**, ...
+        - **Je souhaite**, ...
+        - **Afin de**, ...
     validations:
       required: true
 

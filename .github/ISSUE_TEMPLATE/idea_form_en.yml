@@ -1,13 +1,17 @@
-name: "💡 [EN] Feature Request / Idea"
+name: "💡 [EN] Idea / Feature Request"
 description: "Submit a new idea, improvement, or feature request."
-title: "[💡 IDEA] "
+title: "💡 Title of my new idea"
 labels: ["lang:en", "💡 idea"]
 body:
   - type: markdown
     attributes:
       value: |
-        ### Before you begin 🔎
-        Thank you for taking the time to propose an idea! Please check the existing issues or our project roadmap first to ensure your idea is not already being reviewed or developed.
+      
+        #### Thank you for your proposal!
+        Before getting started, thank you for taking the time to share your idea with us! 
+        To avoid duplicates, please make sure to check existing issues or our **roadmap** 
+        (if available) to see if the topic is already being considered. If it is, feel free 
+        to join the conversation directly on that specific issue!
 
   - type: textarea
     id: description
