@@ -5,9 +5,9 @@
   color: "d73a4a"
   description: "Something isn't working as expected or a functional regression."
 
-- name: "✨ feature"
+- name: "💡 idea"
   color: "f3af49"
-  description: "New feature, evolution, or functional request."
+  description: "New idea, evolution, or functional request."
 
 - name: "♻️ refactor"
   color: "#6ed06d"
