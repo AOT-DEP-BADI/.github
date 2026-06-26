@@ -1,4 +1,4 @@
-name: "💡 [FR] Suggestion d'idée / Nouvelle fonctionnalité"
+name: "💡 [FR] Suggestion d'idée / de nouvelle fonctionnalité"
 description: "Envie de soumettre une nouvelle idée, amélioration ou une nouvelle fonctionnalité."
 title: "💡 Titre de mon idée"
 labels: ["lang:fr", "💡 idea"]
@@ -6,18 +6,18 @@ type: feature
 body:
   - type: markdown
     attributes:
-      value: "<br/>"
-  - type: markdown
-    attributes:
       value: |
         > **Merci pour votre proposition !**
         > Avant de commencer, merci de prendre le temps de partager votre idée avec nous ! Pour éviter les doublons, pensez à vérifier au préalable dans les tickets existants ou sur notre **roadmap** (si elle est disponible) que le sujet n'est pas déjà en cours d'étude. Si c'est le cas, n'hésitez pas à rejoindre la conversation directement sur le ticket concerné !
+
   - type: textarea
     id: description
     attributes:
       label: Description
       description: |
-        Veuillez fournir une description détaillée de votre idée en 2-3 phrases. Ne décrivez pas encore les bénéfices, concentrez-vous uniquement sur la fonctionnalité et son comportement.
+        Veuillez fournir une description détaillée de votre idée en quelques phrases synthétiques. Ne décrivez pas encore les bénéfices, concentrez-vous uniquement sur la fonctionnalité et son comportement.
+      placeholder: |
+        Votre description...      
     validations:
       required: true
       
@@ -28,21 +28,21 @@ body:
       description: |
         Expliquez comment votre idée fonctionnera du point de vue de l'utilisateur. En quoi ce changement va-t-il apporter de la valeur au projet et à la communauté ?
         
-        **Structure recommandée pour votre User Story:**
-        - **En tant que**, [profil utilisateur]
-        - **Je souhaite**, [la fonctionnalité/l'action]
-        - **Afin de**, [le bénéfice ou la valeur ajoutée]
+        **Format recommandé pour votre *User Story* :**
+        - **En tant que** `[profil utilisateur]`
+        - **Je souhaite** `[la fonctionnalité/l'action]`
+        - **Afin de** `[le bénéfice ou la valeur ajoutée]`
       placeholder: |
-        - **En tant que**, ...
-        - **Je souhaite**, ...
-        - **Afin de**, ...
+        - **En tant que** ...
+        - **Je souhaite** ...
+        - **Afin de** ...
     validations:
       required: true
 
   - type: upload
     id: visuals
     attributes:
-      label: 📊 Visuels (Optionnel)
+      label: Visuels (Optionnel)
       description: "Glissez-deposez vos fichiers, captures d'écran ou maquettes pour illustrer votre idée."
 
   - type: checkboxes

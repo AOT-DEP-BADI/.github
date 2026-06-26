@@ -7,15 +7,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        <br/>
-
-        **Thank you for your proposal!**
-        Before getting started, thank you for taking the time to share your idea with us! To avoid duplicates, please make sure to check existing issues or our **roadmap** (if available) to see if the topic is already being considered. If it is, feel free to join the conversation directly on that specific issue!
+        > **Thank you for your proposal!**
+        > Before getting started, thank you for taking the time to share your idea with us! To avoid duplicates, please make sure to check existing issues or our **roadmap** (if available) to see if the topic is already being considered. If it is, feel free to join the conversation directly on that specific issue!
 
   - type: textarea
     id: description
     attributes:
-      label: 🚀 Idea Description
+      label: Description
       description: "Please provide a detailed description of your idea in 2-3 sentences. Focus only on the feature and its expected behavior; do not describe the benefits just yet."
     validations:
       required: true
@@ -28,20 +26,20 @@ body:
         Explain how your idea will work from the user's perspective. How will this change bring value to the project and the community?
         
         **Recommended User Story structure:**
-        - **As a** [user profile]
-        - **I want to** [the feature/action]
-        - **So that** [the benefit or added value]
+        - **As a** `[user profile]`
+        - **I want to** `[the feature/action]`
+        - **So that** `[the benefit or added value]`
       placeholder: |
-        As a...
-        I want to...
-        So that...
+        - **As a** ...
+        - **I want to** ...
+        - **So that** ...
     validations:
       required: true
 
   - type: upload
     id: visuals
     attributes:
-      label: 📊 Visuals (Optional)
+      label: Visuals (Optional)
       description: "Drag and drop your screenshots, diagrams, or wireframes to illustrate your idea."
 
   - type: checkboxes
