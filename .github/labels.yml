@@ -6,15 +6,15 @@
   description: "Something isn't working as expected or a functional regression."
 
 - name: "✨ feature"
-  color: "148944"
+  color: "f3af49"
   description: "New feature, evolution, or functional request."
 
 - name: "♻️ refactor"
-  color: "008b5f"
+  color: "#6ed06d"
   description: "Code restructuring, performance tuning, or technical debt mitigation."
 
 - name: "📝 documentation"
-  color: "008b8d"
+  color: "707ab0"
   description: "Improvements, fixes, or additions to documentation or guides."
 
 # ==========================================
@@ -81,52 +81,52 @@
 
 # --- BRONZE LEVEL --- #
 
-- name: "[🥉 Padawan-contribution]"
+- name: "🥉 Padawan-contribution 🥉"
   color: "cd7f32"
   description: "Excellent and well-scoped first step for newcomers to contribute."
 
-- name: "[🥉 Bug-hunter]"
+- name: "🥉 Bug-hunter 🥉"
   color: "cd7f32"
   description: "Awarded for reporting a clearly documented and reproducible bug. Good catch!"
 
-- name: "[🥉 Idea-maker]"
+- name: "🥉 Good-idea-generator 🥉"
   color: "cd7f32"
   description: "For suggesting a great, community-approved feature or improvement."
 
 # --- SILVER LEVEL --- #
 
-- name: "[🥈 🍿Popcorn-provider]"
+- name: "🥈🥈 Popcorn-provider 🥈🥈"
   color: "cbd5e1"
   description: "For bringing heavy fuel to a fascinating debate. Keep the show going!"
 
-- name: "[🥈 🪰Fly-swatter]"
+- name: "🥈🥈 Fly-swatter 🥈🥈"
   color: "cbd5e1"
   description: "For hunting down that annoying little bug that everyone was ignoring."
 
-- name: "[🥈 Lifesaver]"
+- name: "🥈🥈 Lifesaver 🥈🥈"
   color: "cbd5e1"
   description: "For reporting or fixing a critical, production-breaking issue."
 
-- name: "[🥈 ✍️ Amazing-spell-checker]"
+- name: "🥈🥈 Amazing-spell-checker 🥈🥈"
   color: "cbd5e1"
   description: "For tracking down typos, broken links, or improving documentation files."
 
-- name: "[🥈🧟 Necromancer]"
+- name: "🥈🥈 Necromancer-issue 🥈🥈"
   color: "cbd5e1"
   description: "Successfully revived a dead feature or issue and made it run like new."
 
 # --- GOLD LEVEL --- #
 
-- name: "[🥇🧠 Einstein-brain]"
+- name: "🥇🥇🥇 Einstein-analyse 🥇🥇🥇"
   color: "e3b341"
   description: "A highly detailed, deeply analyzed feature request or technical suggestion."
 
-- name: "[🥇🦾 Judgment-day-delayed]"
+- name: "🥇🥇🥇 Judgment-day-delayer 🥇🥇🥇"
   color: "e3b341"
   description: "Defused a critical, production-breaking bug right before deployment. Skynet can wait."
 
 # --- GOD LEVEL --- #
 
-- name: "[👑⚡ Over-9000-pull-requests]"
+- name: "👑👑👑👑 Over-9000-saiyan-code-reviewer 👑👑👑👑"
   color: "24292f"
-  description: "For reviewing a monstrous Pull Request (+1000 lines, 50 files) without losing your mind."
+  description: "For reviewing a monstrous PR (+100k lines, 500 files) without losing your mind."
