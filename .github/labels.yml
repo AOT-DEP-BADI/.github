@@ -1,0 +1,15 @@
+- name: "🐛 bug"
+  color: "d73a4a"
+  description: "Signaler un comportement anormal ou un dysfonctionnement."
+
+- name: "💡 idea"
+  color: "a2eeef"
+  description: "Proposer une nouvelle idée ou une évolution."
+
+- name: "lang:fr"
+  color: "0055a5"
+  description: "Ticket rédigé en français."
+
+- name: "lang:en"
+  color: "cc0000"
+  description: "Ticket rédigé en anglais."

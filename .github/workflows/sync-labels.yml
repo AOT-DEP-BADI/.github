@@ -1,0 +1,29 @@
+name: Sync Github labels globally
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/labels.yml'
+
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Sync labels to given git repositories
+        uses: crazy-max/ghaction-github-labeler@v5
+        with:
+          yaml-file: .github/labels.yml
+          
+          # Listing of repo's organization to syncrhonize
+          repos: |
+            AOT-DEP-BADI/grist-custom-widget-markdown-dsfr
+            AOT-DEP-BADI/grist-custom-widget-vite
+          
+          # Set to false to delete old labels
+          skip-delete: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.SYNC_LABELS_TOKEN }}
