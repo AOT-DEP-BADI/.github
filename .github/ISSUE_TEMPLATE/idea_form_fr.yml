@@ -2,14 +2,11 @@ name: "💡 [FR] Suggestion d'idée / Nouvelle fonctionnalité"
 description: "Envie de soumettre une nouvelle idée, amélioration ou une nouvelle fonctionnalité."
 title: "💡 Titre de mon idée"
 labels: ["lang:fr", "💡 idea"]
-title-input-config:
-  label: "Titre de votre idée"
-  description: "Donnez un titre clair et concis. Pensez à conserver l'emoji 💡 au début du titre."
+type: feature
 body:
   - type: markdown
     attributes:
       value: |
-
         <br/>
 
         #### Merci pour votre proposition !
