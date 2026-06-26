@@ -2,6 +2,9 @@ name: "💡 [EN] Idea / Feature Request"
 description: "Submit a new idea, improvement, or feature request."
 title: "💡 Title of my new idea"
 labels: ["lang:en", "💡 idea"]
+title-input-config:
+  label: "Idea title"
+  description: "Provide a clear and concise title. Please keep the 💡 emoji at the beginning of the title."
 body:
   - type: markdown
     attributes:
